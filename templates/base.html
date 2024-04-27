@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+  <link rel="stylesheet" href="static/css/css.css" class="css">
+
+  <title>Personal</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('home') }}">Personal</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ url_for('servicos') }}">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ url_for('sobre_nos') }}">Sobre nós</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ url_for('contatos') }}">Contatos
+                &nbsp&nbsp&nbsp&nbsp|&nbsp</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ url_for('login') }}">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ url_for('calculadora') }}">Calculadora</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Cadastro
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{ url_for('cadastrar_pedido') }}">Cadastrar pedido</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('cadastrar_despesas') }}">Cadastrar despesa</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Listar
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{ url_for('listar_pedidos') }}">Pedidos</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('listar_despesas') }}">Despesas</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Relatórios
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{ url_for('search_e') }}">Entregas</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('search_r') }}">Retiradas</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('search_p') }}">Pedidos</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('search_d') }}">Despesas</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="{{ url_for('tabela_precos' )}}">Tabela de preços</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ url_for('logout') }}">Sair</a>
+            </li>
+            {% block pesquisa %}
+
+            {% endblock %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      {% block main %}
+
+      {% endblock %}
+
+      {% block WhatsApp %}
+
+      {% endblock %}
+    </main>
+  </div>
+    <script src="{{ url_for('static', filename='css/bootstrap.bundle.min.js') }}"></script>
+</body>
+
+</html>

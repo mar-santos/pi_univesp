@@ -1,0 +1,21 @@
+body{
+    background-color: #2A3A59;
+    color: #F2F2F2;
+}
+
+.custom-padding {
+    padding-top: 50px;
+}
+
+.custom-padding2 {
+    padding-bottom: 30px;
+}
+
+.whats {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    z-index: 999
+}
+
+    

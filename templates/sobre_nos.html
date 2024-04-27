@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="container">
+    <br>
+    <h1>Sobre Nós</h1>
+    <hr>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="container custom-container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2 class="custom-padding">Mais limpeza, mais saúde!</h2>
+                                <p class="banner-text">Com anos de experiência acumulada no setor de limpeza
+                                    profissional, Renata e Mário compreenderam as necessidades únicas dos clientes e
+                                    perceberam a demanda por serviços especializados de alta qualidade. Com determinação
+                                    e dedicação, eles fundaram a "Personal Limpadora", trazendo consigo um conjunto de
+                                    valores que colocam a excelência e a sustentabilidade no centro de suas operações.
+                                </p>
+                                <p class="banner-text"> A "Personal Limpadora" não apenas oferece serviços de lavagem de
+                                    tapetes e estofados, mas também proporcionam uma experiência personalizada que visa superar as expectativas de cada
+                                    cliente. Seja através da utilização de técnicas avançadas de limpeza ou do emprego
+                                    de produtos ecologicamente corretos, eles estão comprometidos em entregar resultados
+                                    impecáveis, preservando ao mesmo tempo o meio ambiente.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="container" style="padding-top: 50px">
+                        <div class="card" style="width: 18rem;">
+                            <img src="static/imagens/imagem_equipe.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Entre em contato pelo botão ao lado e faça um orçamento sem
+                                    compromisso.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-------Banner End------->
+
+    {% block WhatsApp %}
+    <!--API WhatsApp-->
+    <div class="whats">
+    <a aria-label="Chat on WhatsApp" href="https://wa.me/5516993367128" target="_blank"><img alt="Chat on WhatsApp"
+        src="static/imagens/botao-whatsapp.png" />
+    </div>
+    <!--Fim do API-->
+    {% endblock %}
+
+
+
+    {% endblock %}
